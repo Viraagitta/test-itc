@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Pie } from "@ant-design/plots";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchData } from "../../store/actions";
 
 const PieChart = () => {
-  var data = [
+  const data = useSelector((state) => state.data);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchData());
+  }, []);
+  console.log(data, "<<pie");
+  let items = [
     {
       type: "分类一",
       value: 27,
@@ -28,9 +36,9 @@ const PieChart = () => {
       value: 5,
     },
   ];
-  var config = {
+  let config = {
     appendPadding: 10,
-    data: data,
+    data: items,
     angleField: "value",
     colorField: "type",
     radius: 1,
@@ -53,7 +61,7 @@ const PieChart = () => {
           overflow: "hidden",
           textOverflow: "ellipsis",
         },
-        content: "AntV\nG2Plot",
+        content: `Total Data \n` + `${{ data }}`,
       },
     },
   };
