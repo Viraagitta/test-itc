@@ -9,6 +9,7 @@ import styled from "styled-components";
 import LineChart from "../components/charts/LineChart";
 import BarChart from "../components/charts/BarChart";
 import "../App.css";
+import AddData from "./AddData";
 
 const Wrapper = styled.div`
   margin: 40px;
@@ -54,12 +55,11 @@ function HomePage() {
             </Layout.Content>
           ) : (
             <Layout.Content className="content">
-              <PieChart />
+              <AddData />
             </Layout.Content>
           )}
         </Layout>
       </div>
-      <div></div>
     </>
   );
 }

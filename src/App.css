@@ -67,3 +67,5 @@
   height: 300px;
   width: 10px;
 }
+
+@import '~antd/dist/antd.css';
