@@ -8,7 +8,8 @@ function TableList() {
   useEffect(() => {
     dispatch(fetchData());
   }, []);
-  console.log(data);
+  // console.log(data);
+  const [pagination, setPagination] = useState({});
   const columns = [
     {
       title: "No",
@@ -17,24 +18,16 @@ function TableList() {
     {
       title: "Creator Id",
       dataIndex: "userId",
-      // sorter: (a, b) => (a.name.first > b.name.first ? 1 : -1),
-      // render: (name) => `${name.first} ${name.last}`,
       width: "10%",
     },
     {
       title: "Title",
       dataIndex: "title",
-      // sorter: (a, b) => (a.name.first > b.name.first ? 1 : -1),
-      // render: (name) => `${name.first} ${name.last}`,
       width: "20%",
     },
     {
       title: "Description",
       dataIndex: "body",
-      // filters: [
-      //   { text: "Male", value: "male" },
-      //   { text: "Female", value: "female" },
-      // ],
       width: "60%",
     },
   ];
