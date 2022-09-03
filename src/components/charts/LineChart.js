@@ -12,21 +12,22 @@ const LineChart = () => {
 
   const config = {
     data,
-    width: 150,
-    height: 200,
+    height: 300,
     xField: "id",
     yField: "userId",
     seriesField: "userId",
     yAxis: {
       label: {
-        // formatter: (v) => `${(v / 1).toFixed(2)}`,
+        formatter: (v) => `${(v / 1).toFixed(2)}`,
       },
+    },
+    meta: {
+      count: { min: 0 },
     },
     legend: {
       position: "bottom",
     },
     smooth: true,
-
     animation: {
       appear: {
         animation: "path-in",

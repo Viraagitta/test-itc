@@ -9,7 +9,6 @@ function TableList() {
     dispatch(fetchData());
   }, []);
   // console.log(data);
-  const [pagination, setPagination] = useState({});
   const columns = [
     {
       title: "No",
@@ -31,11 +30,13 @@ function TableList() {
       width: "60%",
     },
   ];
+
   return (
     <>
       <div className="app">
         <div className="table">
-          <Table dataSource={data} columns={columns} pagination={false} />
+          <h1>LIST DATA</h1>
+          <Table dataSource={data} columns={columns} />
         </div>
       </div>
     </>

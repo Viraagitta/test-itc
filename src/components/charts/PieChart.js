@@ -65,13 +65,16 @@ const PieChart = () => {
     colorField: "type",
     radius: 1,
     innerRadius: 0.6,
+    meta: {
+      count: { min: 0 },
+    },
     label: {
       type: "inner",
       offset: "-50%",
       content: "{value}",
       style: {
         textAlign: "center",
-        fontSize: 14,
+        fontSize: 16,
       },
     },
     interactions: [{ type: "element-selected" }, { type: "element-active" }],
@@ -82,7 +85,7 @@ const PieChart = () => {
           whiteSpace: "pre-wrap",
           overflow: "hidden",
           textOverflow: "ellipsis",
-          // width: 50,
+          fontSize: 20,
         },
         content: `Total Data \n ${totalData}`,
       },

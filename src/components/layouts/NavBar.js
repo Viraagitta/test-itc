@@ -24,9 +24,7 @@ const NavBar = ({ menu }) => {
       >
         {menu}
       </Drawer>
-      <a href="/">
-        <img src={logo} className="logo" alt="logo" />
-      </a>
+      <h1>TECHNICAL TEST FRONTEND DEVELOPER</h1>
     </nav>
   );
 };

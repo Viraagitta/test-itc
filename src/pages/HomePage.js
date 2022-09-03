@@ -7,8 +7,11 @@ import TableList from "../components/layouts/TableList";
 import TopicMenu from "../components/layouts/TopicMenu";
 import styled from "styled-components";
 import LineChart from "../components/charts/LineChart";
+import BarChart from "../components/charts/BarChart";
+import "../App.css";
+
 const Wrapper = styled.div`
-  margin: 100px;
+  margin: 40px;
 `;
 
 function HomePage() {
@@ -35,10 +38,18 @@ function HomePage() {
           <SideBar menu={Menu} />
           {topics[contentIndex] === "Home" ? (
             <Layout.Content className="content">
+              <div className="d-flex ">
+                <div className="p-2 flex-fill flexChart">
+                  <BarChart />
+                </div>
+                <div className="p-2 flex-fill flexChart">
+                  <PieChart />
+                </div>
+              </div>
               <Wrapper>
-                <PieChart />
+                <LineChart />
               </Wrapper>
-              <LineChart />
+              {/* <BarChart /> */}
               <TableList />
             </Layout.Content>
           ) : (
