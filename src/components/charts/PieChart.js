@@ -82,6 +82,7 @@ const PieChart = () => {
           whiteSpace: "pre-wrap",
           overflow: "hidden",
           textOverflow: "ellipsis",
+          // width: 50,
         },
         content: `Total Data \n ${totalData}`,
       },

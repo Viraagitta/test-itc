@@ -6,9 +6,10 @@ import SideBar from "../components/layouts/SideBar";
 import TableList from "../components/layouts/TableList";
 import TopicMenu from "../components/layouts/TopicMenu";
 import styled from "styled-components";
-// const Wrapper = styled.div`
-//   margin: 64px 32px;
-// `;
+import LineChart from "../components/charts/LineChart";
+const Wrapper = styled.div`
+  margin: 100px;
+`;
 
 function HomePage() {
   const topics = ["Home", "Create New Data"];
@@ -34,9 +35,10 @@ function HomePage() {
           <SideBar menu={Menu} />
           {topics[contentIndex] === "Home" ? (
             <Layout.Content className="content">
-              {/* <Wrapper> */}
-              <PieChart />
-              {/* </Wrapper> */}
+              <Wrapper>
+                <PieChart />
+              </Wrapper>
+              <LineChart />
               <TableList />
             </Layout.Content>
           ) : (
