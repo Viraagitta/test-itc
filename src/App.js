@@ -11,7 +11,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       {/* <Route path="/:id" element={<DetailPage />} /> */}
-      <Route path="/create" element={<AddData />} />
+      <Route path="/new" element={<AddData />} />
       <Route path="/update" element={<EditData />} />
     </Routes>
   );

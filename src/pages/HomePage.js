@@ -1,13 +1,13 @@
-function HomePage() {
-  // const habits = useSelector((state) => state.habits);
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchHabits());
-  // }, []);
+import PieChart from "../components/charts/PieChart";
+import TableList from "../components/layouts/TableList";
 
+function HomePage() {
   return (
     <>
-      <div> TESTING HOME</div>
+      <div>
+        <PieChart />
+        <TableList />
+      </div>
     </>
   );
 }
